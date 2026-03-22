@@ -4,7 +4,7 @@ from langchain_groq import ChatGroq
 from langchain_core.prompts import PromptTemplate
 
 load_dotenv()
-api_key = os.getenv("GROQ_API_KEY")
+api_key = os.getenv("GROQ_API_KEY") or st.secrets("GROQ_API_KEY")
 
 llm = ChatGroq(
     model_name="llama-3.1-8b-instant",
