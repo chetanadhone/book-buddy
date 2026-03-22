@@ -4,6 +4,7 @@ from langchain_groq import ChatGroq
 from langchain_core.prompts import PromptTemplate
 
 load_dotenv()
+# Added the API key in Streamlit > settings > secrets
 api_key = os.getenv("GROQ_API_KEY") or st.secrets("GROQ_API_KEY")
 
 llm = ChatGroq(
